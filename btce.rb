@@ -27,8 +27,8 @@ require 'net/https'
 require 'json'
 require 'cgi'
 
-KEY = '1M90AU8O-HA03QOUY-F8M9EVSO-FAO2DEM3-PID3F4YD'
-SECRET = '1e43203818fa15958ef51a73af55fa603a203b2530ccd712f9200d3fd4f3f66c'
+KEY = 'FIIQQPCD-Y9NRU5MG-75WFA91T-71D4RNMW-BJWWNI81'
+SECRET = '1785f8988b69e61f57453fde0fc737aca272c68ad9b7ac88d96253bc540969dc'
 
 HOST = 'btc-e.com'
 PORT = '443'
@@ -216,12 +216,6 @@ module Btce
 end
 
 # SIMPLE TEST
-api = Btce::Api.new(KEY, SECRET)
+@api = Btce::Api.new(KEY, SECRET)
 
-puts "============================="
-puts "RUR: %f" % api.balance.amount(Btce::RUR)
-puts "USD: %f" % api.balance.amount(Btce::USD)
-puts "LTC: %f" % api.balance.amount(Btce::LTC)
-puts "BTC: %f" % api.balance.amount(Btce::BTC)
-puts "============================="
-puts "At: %s" % Time.at(api.stats.server_time)
+
